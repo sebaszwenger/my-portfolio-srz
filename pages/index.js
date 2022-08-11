@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Abaut from "../components/Abaut";
 import Main from "../components/Main";
 import Navbar from "../components/Navbar";
 // import Image from 'next/image'
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Main />
+      <Abaut />
     </div>
   );
 }
