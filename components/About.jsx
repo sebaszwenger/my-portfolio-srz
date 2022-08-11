@@ -12,21 +12,26 @@ const Abaut = () => {
           </p>
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">
-            / / I am not your average developer
+            I have always been fascinated by technology and working with
+            computers. In the year 2000 I graduated as a programmer but for
+            personal issues I was never by able to continue this career.
           </p>
           <p className="py-2 text-gray-600">
-            Siempre he tenido fascinacion por la tecnologia y el trabajo con
-            computadoras. En el año 2000 me recibí de programador pero por
-            cuestiones personales nunca pude ejercer de dicha profecion.
+            I have spent the last 8 years providing technical service on
+            equipment of computation.
           </p>
           <p className="py-2 text-gray-600">
-            He pasado los últimos 7 años ofreciendo servicio tecnico en equipos
-            de computo.
+            In 2021 I started this wonderful web development adventure, starting
+            by learning HTML, CSS and JavasCript.
           </p>
           <p className="py-2 text-gray-600">
-            En 2021 me inicie en esta maravillosa aventura del desarrollo web,
-            empezando por aprender HTML, CSS y JavasCript, y en el transcurso de
-            los distintos proyectos revivio en mi, el amor por la programación.
+            With the course of the different projects, the love for programming
+            revived in me and this fascination leads me day by day to learn new
+            technologies.
+          </p>
+          <p className="py-2 text-gray-600">
+            Now I spend my time building projects with React and Next JS and
+            Soon I will continue with Node js.
           </p>
           <Link href="/#projects">
             <p className="py-2 text-gray-600 underline cursor-pointer">
@@ -34,10 +39,9 @@ const Abaut = () => {
             </p>
           </Link>
         </div>
-        <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+        <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-3 hover:scale-105 ease-in duration-300">
           <Image
             src={AboutImg}
-            // layout="responsive"
             width="1920"
             height="1280"
             className="rounded-xl"
