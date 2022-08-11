@@ -21,16 +21,16 @@ const Main = () => {
             back-end technologies.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
+            <div className="rounded-full bg-white hover:bg-blue-500 hover:text-white shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
               <FaLinkedinIn />
             </div>
-            <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
+            <div className="rounded-full bg-white hover:bg-gray-700 hover:text-white shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
               <FaGithub />
             </div>
-            <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
+            <div className="rounded-full bg-white hover:bg-red-500 hover:text-white shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
               <AiOutlineMail />
             </div>
-            <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
+            <div className="rounded-full bg-white hover:bg-sky-500 hover:text-white  shadow-md shadow-gray-800 p-6 cursor-pointer flex hover:scale-110 ease-in duration-200">
               <BsFillPersonLinesFill />
             </div>
           </div>

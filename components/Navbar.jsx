@@ -31,27 +31,27 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex md:justify-between uppercase">
             <Link href="/">
-              <li className=" hover:border-b hover:border-sky-400 ml-10">
+              <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Home
               </li>
             </Link>
             <Link href="/producto">
-              <li className=" hover:border-b hover:border-sky-400 ml-10">
+              <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Abaut
               </li>
             </Link>
             <Link href="/menu">
-              <li className=" hover:border-b hover:border-sky-400 ml-10">
+              <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Skills
               </li>
             </Link>
             <Link href="/nosotros">
-              <li className=" hover:border-b hover:border-sky-400 ml-10">
+              <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 projects
               </li>
             </Link>
             <Link href="/locales">
-              <li className=" hover:border-b hover:border-sky-400 ml-10">
+              <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Contact
               </li>
             </Link>
@@ -85,9 +85,9 @@ const Navbar = () => {
               />
               <div
                 onClick={handleNav}
-                className="rounded-full bg-sky-500 shadow-md shadow-gray-800 p-3 cursor-pointer"
+                className="rounded-full bg-sky-500 shadow-md shadow-gray-800 p-3 cursor-pointer "
               >
-                <AiOutlineClose />
+                <AiOutlineClose className="hover:rotate-180 ease-in duration-300 text-gray-700" />
               </div>
             </div>
             <div className="my-6">
@@ -98,21 +98,21 @@ const Navbar = () => {
           </div>
 
           <div className="pl-4 mt-16 flex flex-col">
-            <ul className="uppercase">
+            <ul className="uppercase ">
               <Link href="/">
-                <li className="mb-8 text-sm">Home</li>
+                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Home</li>
               </Link>
               <Link href="/menu">
-                <li className="mb-8 text-sm">Abaut</li>
+                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Abaut</li>
               </Link>
               <Link href="/">
-                <li className="mb-8 text-sm">Skills</li>
+                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Skills</li>
               </Link>
               <Link href="/">
-                <li className="mb-8 text-sm">projects</li>
+                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">projects</li>
               </Link>
               <Link href="/">
-                <li className="mb-8 text-sm">Contact</li>
+                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Contact</li>
               </Link>
             </ul>
 
@@ -121,16 +121,16 @@ const Navbar = () => {
                 Let´s connect
               </p>
               <div className="flex items-center justify-between w-full py-4 sm:w-[80%]">
-                <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
+                <div className="rounded-full bg-white hover:bg-blue-500 hover:text-white shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
                   <FaLinkedinIn />
                 </div>
-                <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
-                  <AiOutlineMail />
-                </div>
-                <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
+                <div className="rounded-full bg-white hover:bg-gray-700 hover:text-white shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
                   <FaGithub />
                 </div>
-                <div className="rounded-full bg-white hover:bg-sky-500 shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
+                <div className="rounded-full bg-white hover:bg-red-500 hover:text-white shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
+                  <AiOutlineMail />
+                </div>
+                <div className="rounded-full bg-white hover:bg-sky-500 hover:text-white shadow-md shadow-gray-800 p-3 cursor-pointer flex hover:scale-105 ease-in duration-200">
                   <BsFillPersonLinesFill />
                 </div>
               </div>
