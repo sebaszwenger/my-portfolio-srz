@@ -1,19 +1,55 @@
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import logo from "../public/assets/logo-web-sky.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("bg-[#ecf0f3]");
+  const [linkColor, setLinkColor] = useState("text-[#1f2937]");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (
+      router.asPath === "/laMilaGrosa" ||
+      router.asPath === "/mercadoLibreApp" ||
+      router.asPath === "/weatherApp" ||
+      router.asPath === "/cotizadorCripto"
+    ) {
+      setNavBg("transparent");
+      setLinkColor("text-[#ecf0f3]");
+    } else {
+      setNavBg("bg-[#ecf0f3]");
+      setLinkColor("text-[#1f2937]");
+    }
+  }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   return (
-    <div className="fixed w-full h-20 z-[900] top-0 shadow-lg bg-white">
+    <div
+      className={`fixed w-full h-20 z-[900] ${navBg} ${
+        shadow ? "shadow-lg" : ""
+      }`}
+    >
       <div className="max-w-[85%] mx-auto flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/">
           <a className="pt-1">
@@ -21,7 +57,7 @@ const Navbar = () => {
               layout="fixed"
               width="90"
               height="65"
-              src="/assets/logo-web.png"
+              src={logo}
               alt="logo"
               className="cursor-pointer hover:rotate-6 hover:scale-105 duration-200 ease-in"
             />
@@ -29,28 +65,30 @@ const Navbar = () => {
         </Link>
 
         <div>
-          <ul className="hidden md:flex md:justify-between uppercase">
-            <Link href="/">
+          <ul
+            className={`hidden md:flex md:justify-between uppercase ${linkColor}`}
+          >
+            <Link href="/#home">
               <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Home
               </li>
             </Link>
-            <Link href="/producto">
+            <Link href="/#about">
               <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Abaut
               </li>
             </Link>
-            <Link href="/menu">
+            <Link href="/#skills">
               <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Skills
               </li>
             </Link>
-            <Link href="/nosotros">
+            <Link href="/#projects">
               <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 projects
               </li>
             </Link>
-            <Link href="/locales">
+            <Link href="/#contact">
               <li className="ml-10 hover:bg-sky-500 hover:rounded-md py-1 px-2 ease-in duration-200 hover:text-white">
                 Contact
               </li>
@@ -99,20 +137,45 @@ const Navbar = () => {
 
           <div className="pl-4 mt-16 flex flex-col">
             <ul className="uppercase ">
-              <Link href="/">
-                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Home</li>
+              <Link href="/#home">
+                <li
+                  onClick={handleNav}
+                  className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2"
+                >
+                  Home
+                </li>
               </Link>
-              <Link href="/menu">
-                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Abaut</li>
+              <Link href="/#about">
+                <li
+                  onClick={handleNav}
+                  className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2"
+                >
+                  Abaut
+                </li>
               </Link>
-              <Link href="/">
-                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Skills</li>
+              <Link href="/#skills">
+                <li
+                  onClick={handleNav}
+                  className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2"
+                >
+                  Skills
+                </li>
               </Link>
-              <Link href="/">
-                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">projects</li>
+              <Link href="/#projects">
+                <li
+                  onClick={handleNav}
+                  className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2"
+                >
+                  projects
+                </li>
               </Link>
-              <Link href="/">
-                <li className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2">Contact</li>
+              <Link href="/#contact">
+                <li
+                  onClick={handleNav}
+                  className="mb-8 text-sm hover:bg-sky-500 hover:rounded-md hover:text-white ease-in-out duration-200 w-fit py-1 px-2"
+                >
+                  Contact
+                </li>
               </Link>
             </ul>
 
