@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
   return (
@@ -18,10 +17,7 @@ const ProjectItem = ({ title, backgroundImg, projectUrl, tech }) => {
         </h3>
         <p className="pb-4 pt-2 text-white text-center font-semibold">{tech}</p>
         <Link href={projectUrl}>
-          <a
-            target="_blank"
-            className="text-center py-3 rounded-lg bg-white text-gray-800 font-bold text-lg block"
-          >
+          <a className="text-center py-3 rounded-lg bg-white text-gray-800 font-bold text-lg block">
             More Info
           </a>
         </Link>
