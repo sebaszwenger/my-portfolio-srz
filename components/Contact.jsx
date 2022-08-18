@@ -1,15 +1,14 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 import contactImg from "../public/assets/contactimage.jpg";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="w-full lg:h-screen">
+    <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="uppercase text-xl tracking-widest text-sky-500">
           Contact
