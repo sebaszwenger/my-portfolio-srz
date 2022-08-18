@@ -6,7 +6,7 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   return (
-    <div className="w-full">
+    <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="text-xl tracking-widest uppercase text-sky-500">
           Projects
@@ -16,25 +16,25 @@ const Projects = () => {
           <ProjectItem
             title="La Mila Grosa"
             backgroundImg={project1}
-            projectUrl="https://lamilagrosa.vercel.app/"
+            projectUrl="/laMilaGrosa"
             tech="Next JS"
           />
           <ProjectItem
             title="Weather App"
             backgroundImg={project2}
-            projectUrl="https://pronostico-app-delta.vercel.app/"
-            tech="React JS"
-          />
-          <ProjectItem
-            title="MercadoLibre App"
-            backgroundImg={project3}
-            projectUrl="https://mercadolibre-challenge-blue.vercel.app/"
+            projectUrl="/weatherApp"
             tech="React JS"
           />
           <ProjectItem
             title="Cotizador Cripto"
             backgroundImg={project4}
-            projectUrl="https://cotizador-cripto-react-srz.netlify.app/"
+            projectUrl="/cotizadorCripto"
+            tech="React JS"
+          />
+          <ProjectItem
+            title="MercadoLibre App"
+            backgroundImg={project3}
+            projectUrl="/mercadoLibreApp"
             tech="React JS"
           />
         </div>
